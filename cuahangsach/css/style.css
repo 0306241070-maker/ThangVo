@@ -1,0 +1,196 @@
+/* Thiết lập chung */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Sử dụng font chữ phổ biến */
+}
+
+body {
+    background-color: #f8f8f8; /* Màu nền hơi xám nhẹ */
+}
+
+.container {
+    width: 90%; /* Chiều rộng tổng thể */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; /* Đệm hai bên */
+}
+
+/* HEADER TOP-BAR: Logo, Tìm kiếm, Icon */
+.header {
+    margin-bottom: 20px;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+/* Logo */
+.logo svg {
+    width: 150px; /* Chỉnh kích thước logo */
+    height: auto;
+}
+
+/* Thanh tìm kiếm */
+.header-center {
+    flex-grow: 1; /* Cho phép chiếm không gian lớn */
+    margin: 0 40px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.search-input-group {
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-left: 10px;
+    width: 100%;
+    max-width: 450px; /* Chiều rộng thanh tìm kiếm theo ảnh */
+    position: relative;
+}
+
+.search-input-group input {
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 5px 10px;
+    flex-grow: 1;
+    font-size: 14px;
+}
+
+.search-icon-left {
+    color: #999;
+    margin-right: 5px;
+}
+
+.search-icon-right {
+    color: #999;
+    cursor: pointer;
+}
+
+/* Icon chức năng (Giỏ hàng, Hotline, etc.) */
+.nav-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    color: #444;
+}
+
+.icon-item i {
+    font-size: 24px;
+    margin-bottom: 2px;
+}
+
+/* Màu icon theo ảnh */
+.icon-item:nth-child(1) i, /* Giỏ hàng */
+.icon-item:nth-child(2) i, /* Hotline */
+.icon-item:nth-child(3) i { /* Thông báo */
+    color: #fa5252; /* Màu đỏ nổi bật */
+}
+
+.icon-item:nth-child(4) i { /* Tài khoản */
+    color: #6200ed; /* Màu tím/xanh tím */
+}
+
+/* MAIN NAVIGATION (Trang chủ, Danh mục,...) */
+.main-nav {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd; /* Đường kẻ phân cách */
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.nav-item i {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+/* Màu sắc icon thanh điều hướng theo ảnh */
+.nav-item:nth-child(1) i { color: #525252; } /* Trang chủ - Home */
+.nav-item:nth-child(2) i { color: #f06595; } /* Danh mục - List */
+.nav-item:nth-child(3) i { color: #a674fa; } /* Khuyến mãi - Tags/Scissors */
+.nav-item:nth-child(4) i { color: #38d9a9; } /* Hỗ trợ - Headset */
+
+
+/* CONTENT - DANH SÁCH SẢN PHẨM */
+
+.content-wrapper {
+    margin-top: 10px;
+}
+
+.content-divider {
+    border: none;
+    border-top: 3px solid #0056b3; /* Đường kẻ ngang dày, màu xanh đậm */
+    margin-bottom: 20px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Khoảng cách giữa các sản phẩm */
+}
+
+.product-card {
+    width: 25%; /* 4 sản phẩm, mỗi sản phẩm chiếm 1/4 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px; /* Điều chỉnh chiều cao tối đa cho ảnh */
+    object-fit: contain; /* Đảm bảo hình ảnh vừa vặn mà không bị cắt xén */
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tạo hiệu ứng nổi nhẹ cho bìa sách */
+}
+
+.product-info {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    height: 40px; /* Giữ cố định chiều cao cho tên sản phẩm 2 dòng */
+    overflow: hidden;
+}
+
+.product-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000; /* Giá màu đen */
+}
