@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Ứng Tuyển | Trang Chủ</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-color: #0d47a1;
+      color: white;
+    }
+
+    header {
+      background: black;
+      padding: 20px;
+      color: white;
+    }
+
+    nav {
+      background: #2c3e50;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin: 30px auto;
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 20px;
+      width: 80%;
+    }
+
+    ul { list-style: none; padding: 0; }
+    li { margin: 5px 0; }
+
+    button {
+      background: #1565c0;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    button:hover { background: #0b3c89; }
+
+    footer {
+      background: black;
+      padding: 15px;
+      color: white;
+      text-align: center;
+    }
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(5px);
+      z-index: 100;
+    }
+    .form-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255,255,255,0.15);
+      border-radius: 10px;
+      padding: 25px;
+      width: 350px;
+      color: white;
+      z-index: 101;
+      display: none;
+    }
+
+    input {
+      display: block;
+      width: 90%;
+      margin: 10px auto;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      outline: none;
+      background: white;
+      color: black;
+    }
+
+    input:focus {
+      border: 1px solid #64b5f6;
+      box-shadow: 0 0 5px #64b5f6;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>🌟 HỆ THỐNG ỨNG TUYỂN & TẠO CV TRỰC TUYẾN 🌟</h1>
+  </header>
+
+  <!-- Menu -->
+  <nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="jobseeker.html">Người tìm việc</a>
+    <a href="employer.html">Nhà tuyển dụng</a>
+    <a href="admin.html">Quản trị viên</a>
+    <span id="menu-login">
+      <a href="#" onclick="openForm('loginForm')">Đăng nhập</a> /
+      <a href="#" onclick="openForm('registerForm')">Đăng ký</a>
+    </span>
+  </nav>
+
+  <!-- Nội dung chính -->
+  <section>
+    <h2>👋 Chào mừng bạn đến với Website Ứng Tuyển</h2>
+    <p>
+      Đây là nền tảng giúp kết nối <b>người tìm việc</b> và <b>nhà tuyển dụng</b> nhanh chóng, hiệu quả.
+      Người dùng có thể tạo CV trực tuyến, chia sẻ hồ sơ, tải xuống CV hoặc ứng tuyển trực tiếp.
+    </p>
+  </section>
+
+  <section>
+    <h2>⚙️ Chức năng nổi bật</h2>
+    <div style="display:flex; justify-content:center; flex-wrap:wrap;">
+      <div style="width:280px; background:rgba(255,255,255,0.15); padding:15px; border-radius:10px; margin:10px;">
+        <h3>👨‍🎓 Người tìm việc</h3>
+        <ul>
+          <li>Tạo CV cá nhân</li>
+          <li>Lưu & tải xuống</li>
+          <li>Chia sẻ hồ sơ</li>
+          <li>Quản lý tài khoản</li>
+        </ul>
+        <button onclick="goToPage('jobseeker.html')">Truy cập</button>
+      </div>
+
+      <div style="width:280px; background:rgba(255,255,255,0.15); padding:15px; border-radius:10px; margin:10px;">
+        <h3>🏢 Nhà tuyển dụng</h3>
+        <ul>
+          <li>Đăng tin tuyển dụng</li>
+          <li>Tìm kiếm & duyệt CV</li>
+          <li>Liên hệ ứng viên</li>
+          <li>Quản lý hồ sơ công ty</li>
+        </ul>
+        <button onclick="goToPage('employer.html')">Truy cập</button>
+      </div>
+
+      <div style="width:280px; background:rgba(255,255,255,0.15); padding:15px; border-radius:10px; margin:10px;">
+        <h3>🛠️ Quản trị viên</h3>
+        <ul>
+          <li>Quản lý người dùng</li>
+          <li>Kiểm duyệt CV</li>
+          <li>Quản lý phản hồi</li>
+          <li>Tạo mẫu CV</li>
+        </ul>
+        <button onclick="goToPage('admin.html')">Truy cập</button>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>📞 Liên hệ hỗ trợ</h2>
+    <p>Email: <a href="mailto:hotro@cvonline.vn" style="color:#bbdefb;">hotro@cvonline.vn</a></p>
+    <p>Hotline: <b>0123 456 789</b></p>
+  </section>
+
+  <!-- Form Đăng nhập -->
+  <div id="loginForm" class="form-container">
+    <h2>🔐 Đăng nhập</h2>
+    <input type="text" placeholder="Tên đăng nhập" id="loginUser">
+    <input type="password" placeholder="Mật khẩu" id="loginPass">
+    <button onclick="loginSuccess()">Đăng nhập</button>
+    <button onclick="closeForms()">Đóng</button>
+  </div>
+
+  <!-- Form Đăng ký -->
+  <div id="registerForm" class="form-container">
+    <h2>📝 Đăng ký tài khoản</h2>
+    <input type="text" placeholder="Họ và tên" id="regName">
+    <input type="text" placeholder="Tên đăng nhập" id="regUser">
+    <input type="password" placeholder="Mật khẩu" id="regPass">
+    <input type="password" placeholder="Nhập lại mật khẩu" id="regPass2">
+    <button onclick="registerUser()">Đăng ký</button>
+    <button onclick="closeForms()">Đóng</button>
+  </div>
+
+  <!-- Overlay nền mờ -->
+  <div id="overlay" class="overlay" onclick="closeForms()"></div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Website Ứng Tuyển - Thiết kế bởi Minh Thắng
+  </footer>
+
+  <script>
+    function goToPage(page) {
+      window.location.href = page;
+    }
+
+    function openForm(formId) {
+      document.getElementById("overlay").style.display = "block";
+      document.getElementById(formId).style.display = "block";
+    }
+
+    function closeForms() {
+      document.getElementById("overlay").style.display = "none";
+      document.getElementById("loginForm").style.display = "none";
+      document.getElementById("registerForm").style.display = "none";
+    }
+
+    // Đăng nhập bằng LocalStorage
+    function loginSuccess() {
+      let user = document.getElementById("loginUser").value.trim();
+      let pass = document.getElementById("loginPass").value.trim();
+
+      if (!user || !pass) {
+        alert("Vui lòng nhập đầy đủ thông tin!");
+        return;
+      }
+
+      let accounts = JSON.parse(localStorage.getItem("accounts")) || [];
+      let found = accounts.find(acc => acc.username === user && acc.password === pass);
+
+      if (found) {
+        alert("Đăng nhập thành công!");
+        closeForms();
+        document.getElementById("menu-login").innerHTML =
+          `<b>Xin chào, ${found.name}</b> | <a href="#" onclick="logout()">Đăng xuất</a>`;
+      } else {
+        alert("Tên đăng nhập hoặc mật khẩu không đúng!");
+      }
+    }
+
+    // Đăng ký tài khoản
+    function registerUser() {
+      let name = document.getElementById("regName").value.trim();
+      let user = document.getElementById("regUser").value.trim();
+      let pass = document.getElementById("regPass").value.trim();
+      let pass2 = document.getElementById("regPass2").value.trim();
+
+      if (!name || !user || !pass || !pass2) {
+        alert("Vui lòng điền đầy đủ thông tin!");
+        return;
+      }
+      if (pass !== pass2) {
+        alert("Mật khẩu nhập lại không khớp!");
+        return;
+      }
+
+      let accounts = JSON.parse(localStorage.getItem("accounts")) || [];
+      if (accounts.some(acc => acc.username === user)) {
+        alert("Tên đăng nhập đã tồn tại!");
+        return;
+      }
+
+      accounts.push({ name, username: user, password: pass });
+      localStorage.setItem("accounts", JSON.stringify(accounts));
+
+      alert("Đăng ký thành công!");
+      closeForms();
+    }
+
+    // Đăng xuất
+    function logout() {
+      document.getElementById("menu-login").innerHTML = `
+        <a href="#" onclick="openForm('loginForm')">Đăng nhập</a> /
+        <a href="#" onclick="openForm('registerForm')">Đăng ký</a>
+      `;
+      alert("Đã đăng xuất!");
+    }
+  </script>
+</body>
+</html>
