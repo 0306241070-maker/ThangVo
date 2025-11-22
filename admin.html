@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản Trị Viên | Website Ứng Tuyển</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0d47a1;
+      color: white;
+     text-align: center;
+  
+    }
+    header, footer {
+      background: black;
+      color: white;
+      padding: 15px;
+    }
+    nav {
+      background: #2c3e50;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .main-layout {
+      display: flex;
+      min-height: calc(100vh - 120px);
+    }
+    .sidebar, .right-sidebar {
+      width: 220px;
+      padding: 20px;
+      text-align: center;
+    }
+    .sidebar {
+      background: #1a237e;
+    }
+    .right-sidebar {
+      background: #0b3c89;
+      color: white;
+    }
+    .sidebar h3, .right-sidebar h3 {
+      color: #bbdefb;
+      margin-bottom: 15px;
+    }
+    .sidebar ul, .right-sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li, .right-sidebar li {
+      margin: 10px 0;
+    }
+    .sidebar a, .right-sidebar a {
+      color: white;
+      text-decoration: none;
+    }
+    .sidebar a:hover, .right-sidebar a:hover {
+      text-decoration: underline;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+    section {
+      background: rgba(255,255,255,0.1);
+      margin: 20px auto;
+      padding: 20px;
+      width: 90%;
+      border-radius: 10px;
+    }
+    table {
+      width: 100%;
+      margin: auto;
+      border-collapse: collapse;
+      background: white;
+      color: black;
+      border-radius: 10px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    button {
+      background: #1565c0;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0b3c89;
+    }
+    input[type="text"] {
+      padding: 8px;
+      border-radius: 6px;
+      border: none;
+      margin-right: 10px;
+    }
+    #userChart {
+      max-width: 250px;
+      margin: 20px auto;
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .main-layout {
+        flex-direction: column;
+      }
+      .sidebar, .right-sidebar {
+        width: 100%;
+      }
+      section {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🛠️ Quản Trị Viên - Quản Lý Hệ Thống</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="jobseeker.html">Người tìm việc</a>
+    <a href="employer.html">Nhà tuyển dụng</a>
+    <a href="admin.html">Quản trị viên</a>
+  </nav>
+
+  <div class="main-layout">
+    <div class="sidebar">
+      <h3>📁 Điều Hướng</h3>
+      <ul>
+        <li><a href="#">Người dùng</a></li>
+        <li><a href="#">CV chờ duyệt</a></li>
+        <li><a href="#">Phản hồi</a></li>
+        <li><a href="#">Mẫu CV</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <section>
+        <h2>👥 Quản Lý Người Dùng</h2>
+        <table>
+          <tr><th>Tên</th><th>Vai trò</th><th>Trạng thái</th><th>Hành động</th></tr>
+          <tr>
+            <td>Võ Minh Thắng</td>
+            <td>Người tìm việc</td>
+            <td>Hoạt động</td>
+            <td>
+              <div style="display: flex; justify-content: center; gap: 8px; align-items: center;">
+                <button onclick="confirmAction('Khóa người dùng này?')">Khóa</button>
+                <button onclick="confirmAction('Bạn có chắc muốn xóa?')">Xóa</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Trần Văn B</td>
+            <td>Nhà tuyển dụng</td>
+            <td>Bị khóa</td>
+            <td><button onclick="confirmAction('Mở khóa người dùng này?')">Mở khóa</button></td>
+          </tr>
+        </table>
+      </section>
+
+      <section>
+        <h2>📄 Kiểm Duyệt Nội Dung CV</h2>
+        <p>CV #001 - Nguyễn A: 
+          <button onclick="confirmAction('Duyệt CV này?')">Duyệt</button> 
+          <button onclick="confirmAction('Báo vi phạm CV này?')">Báo vi phạm</button>
+        </p>
+      </section>
+
+      <section>
+        <h2>💬 Quản Lý Phản Hồi</h2>
+        <p>Người dùng: “Giao diện dễ dùng!”</p>
+        <button onclick="confirmAction('Trả lời phản hồi này?')">Trả lời</button>
+      </section>
+
+      <section>
+        <h2>🎨 Quản Lý Mẫu CV</h2>
+        <p>Tạo mẫu CV theo ngành nghề:</p>
+        <input type="text" placeholder="Tên mẫu CV">
+        <button onclick="confirmAction('Tạo mẫu CV mới?')">Tạo mẫu mới</button>
+      </section>
+    </div>
+
+    <div class="right-sidebar">
+      <h3>📊 Thống Kê</h3>
+      <ul>
+        <li>Người dùng: 120</li>
+        <li>CV chờ duyệt: 8</li>
+        <li>Phản hồi mới: 3</li>
+      </ul>
+      <canvas id="userChart"></canvas>
+
+      <h3>🔧 Công Cụ</h3>
+      <ul>
+        <li><a href="#">Cài đặt hệ thống</a></li>
+        <li><a href="#">Quản lý quyền</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Website Ứng Tuyển - Minh Thắng
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('userChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Người tìm việc', 'Nhà tuyển dụng'],
+        datasets: [{
+          data: [80, 40],
+          backgroundColor: ['#42a5f5', '#ef5350']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'bottom' }
+        }
+      }
+    });
+
+    function confirmAction(message) {
+      if (confirm(message)) {
+        alert("Thao tác đã thực hiện!");
+      }
+    }
+  </script>
+</body>
+</html>
