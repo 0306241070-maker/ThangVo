@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Người Tìm Việc | Website Ứng Tuyển</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background-color: #0d47a1;
+      color: white;
+      text-align: center;
+    }
+    header, footer {
+      background: black;
+      color: white;
+      padding: 15px;
+    }
+    nav { background: #2c3e50; padding: 10px; }
+    nav a { color: white; text-decoration: none; margin: 10px; font-weight: bold; }
+    section { background: rgba(255,255,255,0.1); padding: 20px; margin: 20px auto; width: 80%; border-radius: 10px; }
+    input, textarea {
+      display: block;
+      width: 70%;
+      margin: 10px auto;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+    }
+    button {
+      background: #1565c0; color: white; border: none;
+      padding: 10px 20px; border-radius: 6px; cursor: pointer;
+    }
+    button:hover { background: #0b3c89; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>👨‍🎓 Người Tìm Việc - Tạo & Quản Lý CV</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="jobseeker.html">CV của tôi</a>
+    <a href="employer.html">Nhà tuyển dụng</a>
+    
+  </nav>
+
+  <section>
+    <h2>📝 Tạo CV Cá Nhân</h2>
+    <input type="text" placeholder="Họ và tên">
+    <input type="text" placeholder="Vị trí ứng tuyển">
+    <textarea placeholder="Giới thiệu bản thân..."></textarea>
+    <textarea placeholder="Kinh nghiệm làm việc..."></textarea>
+    <textarea placeholder="Kỹ năng nổi bật..."></textarea>
+    <button onclick="alert('Đã lưu CV thành công!')">Lưu CV</button>
+    <button onclick="alert('Tải xuống CV PDF thành công!')">Tải xuống PDF</button>
+  </section>
+
+  <section>
+    <h2>📁 Danh sách CV của bạn</h2>
+    <p>CV 1 - <a href="#" style="color:#bbdefb;">Xem</a> | <a href="#" style="color:#bbdefb;">Chia sẻ</a> | <a href="#" style="color:#bbdefb;">Xóa</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Website Ứng Tuyển - MINH THANG
+  </footer>
+</body>
+</html>

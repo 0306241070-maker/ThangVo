@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nhà Tuyển Dụng | Website Ứng Tuyển</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#0d47a1; color:white; text-align:center; }
+    header, footer { background:black; color:white; padding:15px; }
+    nav { background:#2c3e50; padding:10px; }
+    nav a { color:white; margin:10px; text-decoration:none; font-weight:bold; }
+    section { background:rgba(255,255,255,0.1); margin:20px auto; padding:20px; width:80%; border-radius:10px; }
+    input, textarea { display:block; width:70%; margin:10px auto; padding:10px; border:none; border-radius:6px; }
+    button { background:#1565c0; color:white; border:none; padding:10px 20px; border-radius:6px; cursor:pointer; }
+    button:hover { background:#0b3c89; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🏢 Nhà Tuyển Dụng - Quản Lý Tuyển Dụng</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="jobseeker.html">Người tìm việc</a>
+    <a href="employer.html">Đăng tin tuyển dụng</a>
+    
+  </nav>
+
+  <section>
+    <h2>📝 Đăng Tin Tuyển Dụng</h2>
+    <input type="text" placeholder="Vị trí cần tuyển">
+    <textarea placeholder="Mô tả công việc..."></textarea>
+    <textarea placeholder="Yêu cầu ứng viên..."></textarea>
+    <textarea placeholder="Quyền lợi & chế độ..."></textarea>
+    <input type="date" placeholder="Hạn nộp hồ sơ">
+    <button onclick="alert('Đã đăng tin thành công!')">Đăng Tin</button>
+  </section>
+
+  <section>
+    <h2>🔍 Tìm Kiếm Ứng Viên</h2>
+    <input type="text" placeholder="Nhập kỹ năng hoặc vị trí...">
+    <button onclick="alert('Đã tìm kiếm CV phù hợp!')">Tìm kiếm</button>
+
+    <div style="margin-top:20px;">
+      <h3>📄 CV: MINH THANG</h3>
+      <p>Kỹ năng: HTML, CSS, JS</p>
+      <button>Xem chi tiết</button>
+      <button>Liên hệ</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>🏢 Quản Lý Hồ Sơ Công Ty</h2>
+    <input type="text" placeholder="Tên công ty">
+    <input type="text" placeholder="Lĩnh vực hoạt động">
+    <textarea placeholder="Mô tả văn hóa & môi trường làm việc..."></textarea>
+    <button>Lưu thông tin</button>
+  </section>
+
+  <footer>
+    &copy; 2025 Website Ứng Tuyển - MINH THANG
+  </footer>
+</body>
+</html>
